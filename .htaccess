@@ -10,5 +10,5 @@ RewriteCond %{REQUEST_URI} ^(\/[a-z_\-\s0-9\.]+)+\.[a-zA-Z]{2,4}$
 RewriteRule ^ - [L,R=404]
 
 # otherwise use history router
-RewriteRule ^ /https://hqmultimedia.github.io/cv-final/
+RewriteRule ^ https://hqmultimedia.github.io/cv-final/
 </IfModule>
