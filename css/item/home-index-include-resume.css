@@ -1,0 +1,282 @@
+/* setting chung */
+
+.father-box-resume-row-one .child-box .box-child-items {
+    border-left: 2px solid var(--color--text--highlight);
+    padding-left: 55px;
+    padding-right: 20px;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    margin-right: 25px;
+}
+
+
+/* setting riêng element thứ 2 */
+
+.father-box-resume-row-one .child-box .box-child-items:nth-child(3) {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.father-box-resume-row-one .child-box .child-item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.father-box-resume-row-one .child-box .box-child-items .box-grandchildren-items .item::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: -55px;
+    transform: translateY(-50%);
+    background-color: var(--color--text--highlight);
+}
+
+.father-box-resume-row-one .child-box .box-child-items .box-grandchildren-items .item::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 50%;
+    left: -45px;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--color--text--highlight);
+}
+
+.father-box-resume-row-one .child-box .box-child-items .grandchildren-item:nth-child(2) {
+    margin: 10px 0;
+    display: block;
+}
+
+.father-box-resume-row-one .child-box .box-child-items .grandchildren-item:nth-child(3) {
+    font-size: 16px;
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .father-box-resume-row-one .child-box .box-child-items {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width:991px) {
+    .father-box-resume-row-one .child-box .box-child-items {
+        margin-right: 0px;
+    }
+}
+
+
+/* New code */
+
+
+/* card-list */
+
+.box-cards-resume {
+    --spacing: 25px;
+    --columns: 4;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--spacing));
+    margin-top: 60px;
+    margin-bottom: 45px;
+}
+
+@media screen and (max-width: 1023px) {
+    .box-cards-resume {
+        --columns: 2;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .box-cards-resume {
+        --spacing: 15px;
+        --columns: 1;
+    }
+}
+
+.card-resume {
+    border-radius: 8px;
+    overflow: hidden;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    width: calc(calc(100% / var(--columns)) - var(--spacing));
+    margin-left: var(--spacing);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px 0 25px;
+    align-items: center;
+}
+
+
+/* phần setting cho pie chart */
+
+.skill-item.center-block p,
+span.percent {
+    color: white;
+}
+
+.skill-item.center-block p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.skill-item {
+    position: relative;
+    max-width: 250px;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    margin-bottom: 27px;
+}
+
+.skill-item .chart,
+.skill-item .chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.skill-item .chart:before {
+    content: "";
+    width: 0;
+    height: 100%;
+}
+
+.skill-item .chart:before,
+.skill-item .percent {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.skill-item .percent {
+    position: relative;
+    line-height: 1;
+    font-size: 40px;
+    font-weight: 900;
+    z-index: 2;
+}
+
+.skill-item .percent:after {
+    content: attr(data-after);
+    font-size: 20px;
+}
+
+
+/* End phần setting cho pie chart */
+
+
+/* phần setting cho bar chart */
+
+.chart {
+    width: 100%;
+    height: 386px;
+    display: block;
+    padding: 30px 15px 30px 15px;
+}
+
+.numbers {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+    float: left;
+}
+
+.numbers li {
+    list-style: none;
+    height: 150px;
+    position: relative;
+    bottom: 145px;
+}
+
+.numbers span {
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.bars {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: calc(100% - 50px);
+    height: 339px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.bars li {
+    display: table-cell;
+    width: 100px;
+    height: 300px;
+    position: relative;
+}
+
+.bars span {
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+}
+
+.bars .bar {
+    display: block;
+    background: #17C0EB;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(23, 192, 235, 0.5);
+    transition: 0.5s;
+}
+
+.bars .bar:hover {
+    background: #55EFC4;
+    box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.5);
+    cursor: pointer;
+}
+
+.bars .bar:before {
+    color: #fff;
+    content: attr(data-percentage) '%';
+    position: relative;
+    bottom: 20px;
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .bars .bar {
+        width: auto;
+    }
+    .numbers {
+        width: 30px;
+    }
+    .bars span {
+        font-size: 11px;
+        bottom: -45px;
+    }
+}
+
+
+/* End phần setting cho bar chart */
+
+
+/* End new code */

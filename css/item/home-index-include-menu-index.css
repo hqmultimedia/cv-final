@@ -1,0 +1,78 @@
+.father-menu-home {
+    height: 99px;
+    line-height: 99px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}
+
+
+/* right */
+
+.father-menu-home .button-menu-small {
+    color: var(--neutral--color--white);
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.4s;
+    display: none;
+}
+
+.father-menu-home .button-menu-small:hover {
+    color: bisque;
+}
+
+.father-menu-home .child-box:nth-child(2) .box-child-items li {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #e6e6e6;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.father-menu-home .child-box:nth-child(2) .box-child-items li:hover {
+    color: wheat;
+}
+
+
+/* resposive */
+
+@media (max-width:768px) {
+    .father-menu-home .box-menu {
+        position: relative;
+    }
+    .father-menu-home .button-menu-small {
+        display: block;
+    }
+    .father-menu-home .child-box:nth-child(2) {
+        position: absolute;
+        top: 0;
+    }
+    .father-menu-home .child-box:nth-child(2) .box-child-items {
+        position: absolute;
+        top: 68px;
+        right: -255px;
+        line-height: 42px;
+        flex-direction: column;
+        background: #787878;
+        width: 227px;
+        transition: 0.4s;
+    }
+    .father-menu-home .child-box:nth-child(2) .box-child-items .link {
+        border-bottom: 1px solid gray;
+        padding-left: 10px;
+        margin: 0;
+        transition: 0.4s;
+    }
+    .father-menu-home .child-box:nth-child(2) .box-child-items .link:hover {
+        border-left: 1px solid rgb(216, 214, 214);
+        padding-left: 15px;
+    }
+    /* dành cho click */
+    /* dành cho hover */
+    .father-menu-home .child-box:nth-child(2) .box-menu:hover .box-child-items {
+        right: 0 !important;
+    }
+}

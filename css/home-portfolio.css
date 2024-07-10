@@ -1,0 +1,12 @@
+@import url(item/home-portfolio-include-web-product.css);
+.box-preview-project {
+    overflow: hidden;
+    height: 479px;
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    .box-preview-project {
+        overflow: hidden;
+        height: auto;
+    }
+}

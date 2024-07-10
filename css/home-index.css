@@ -1,0 +1,141 @@
+/* css include */
+
+@import url(item/home-index-include-menu-index.css);
+@import url(item/home-index-include-portfolio.css);
+@import url(item/home-index-include-about.css);
+@import url(item/home-index-include-resume.css);
+@import url(item/home-index-include-contact.css);
+
+/* css home */
+
+.father-box-index-row-one::before {
+    content: '';
+    background-color: #00000066;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.father-box-index {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* overlay từ hướng top-bottom */
+
+.overlay-class-1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    background-color: #30302f;
+    z-index: 99999;
+    opacity: 1;
+    transform: translateY(50%);
+    transition: 1.45s;
+}
+
+.show-overlay.overlay-class-1::before {
+    transform: translateY(-100%);
+    transition: 1.45s;
+}
+
+
+/* overlay từ hướng left right */
+
+.overlay-class-2::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    transform: translateX(-120%) !important;
+    background-color: #30302f;
+    transition: 3s;
+    z-index: 9999;
+}
+
+.show-overlay-lr.overlay-class-2::after {
+    transform: translateX(120%) !important;
+    transition: 3s;
+}
+
+.show-overlay-rl.overlay-class-2::after {
+    transform: translateX(-120%) !important;
+    transition: 3s;
+}
+
+
+/*     
+
+/* khối text chính giữa */
+
+.father-box-index-row-one .child-box:nth-child(2) .child-item:nth-child(1) {
+    font-size: 50px;
+    border: 1px solid white !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.father-box-index-row-one .child-box:nth-child(2) .child-item:nth-child(2) {
+    font-size: 28px;
+    color: white;
+}
+
+.father-box-index-row-one .child-box:nth-child(2) .child-item:nth-child(3) {
+    font-size: 28px;
+    color: #eca923;
+}
+
+
+/* khối icon right */
+
+.father-box-index-row-one .child-box:nth-child(3) {
+    right: 39px;
+    bottom: 5px;
+    padding: 15px 0px;
+}
+
+.father-box-index-row-one .child-box:nth-child(3) .child-item {
+    /* color: #7a5c5c; */
+    color: white;
+    font-size: 25px;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
+.father-box-index-row-one .child-box:nth-child(3) .child-item:hover {
+    color: #333841;
+}
+
+.father-box-index-row-one .child-box:nth-child(3) .child-item:nth-child(1):hover {
+    color: #0866FF;
+}
+
+
+/* khối icon left */
+
+.father-box-index-row-one .child-box:nth-child(4) {
+    left: 39px;
+    bottom: 5px;
+    padding: 15px 0px;
+}
+
+.father-box-index-row-one .child-box:nth-child(4) .child-item {
+    font-size: 14px;
+    color: white;
+    margin: 5px 0;
+    transform: rotate(-90deg);
+    border: 1px solid rgba(255, 255, 255, 0.445);
+    border-radius: 3px;
+    padding: 2px 8px;
+    margin: 7px 0px;
+}
+
+.father-box-index-row-one .child-box:nth-child(4) .child-item:nth-child(2) {
+    background-color: #333841;
+}

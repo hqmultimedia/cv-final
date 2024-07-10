@@ -1,0 +1,48 @@
+﻿/* chia cột */
+
+.box-image {
+    --spacing: 25px;
+    --columns: 4;
+    margin-left: calc(-1 * var(--spacing));
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.item-image img {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+.twentytwenty-wrapper {
+    width: calc(calc(100% / var(--columns)) - var(--spacing));
+    margin-left: var(--spacing);
+    margin-bottom: var(--spacing);
+    padding: 15px;
+    background-color: #161616;
+    border-radius: 8px;
+}
+
+
+/* End chia cột */
+
+
+/* responsive */
+
+@media (min-width:544px) and (max-width:767px) {
+    .twentytwenty-wrapper {
+        width: calc(50% - 60px);
+        /* width: calc(100%); */
+    }
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .twentytwenty-wrapper {
+        /* width: calc(50% - 60px); */
+        width: calc(100%);
+    }
+}
