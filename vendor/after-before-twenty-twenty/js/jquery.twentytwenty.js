@@ -41,7 +41,7 @@
             var calcOffset = function(dimensionPct) {
                  var w = beforeImg.width();
                 if (beforeImg.width() == 0) {
-                    w = 262
+                    w = 100 + "%"
 
                 }
                 var h = beforeImg.height();
